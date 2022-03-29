@@ -44,7 +44,13 @@ def verif(self):   #fct de recursif, tjr commencer par la base
 			return maxi
 		else:
 			return self.fils[1].supprime_max()
-
+#tri par tas
+def tri_tas(liste):
+	transfo_tas(liste, 1)
+	for j in range(len(liste)):
+		liste[0],liste[-j-1] = liste[-j-1],liste[0]
+		tasser(liste[:-j-1],1)
+	return liste
 			
 		
 				
